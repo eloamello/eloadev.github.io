@@ -1,0 +1,207 @@
+:root {
+    --branco: #fff;
+    --black-500: #000;
+    --cuteBackground: #cdb4db;
+    --verdinho: #8dd7cf;
+    --amarelinho: #f6e291;
+    --vermelhinho: #e9a2ad;
+    --roxinho: #8da1d7;
+    --bordaRosa: #ffc8dd;
+    --bordaAzul: #bde0fe;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    align-items: center;
+}
+
+.titulo {
+    margin: 30px;
+    text-align: center;
+    font-size: 1.4em;
+    color: #bde0fe;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #a2d2ff;
+}
+
+body {
+    background: var(--cuteBackground);
+}
+
+.main {
+    margin: 50px 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+    -ms-grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+}
+
+.mainCartao {
+    background: var(--branco);
+    padding: 20px;
+    width: 100%;
+    max-width: 40vw;
+    border: solid 3px var(--bordaRosa);
+}
+
+@media screen and (max-width:1279px) {
+    .mainCartao {
+        max-width: 80vw;
+    }
+}
+
+.mainSec {
+    display: grid;
+    -ms-grid-template-columns: 1.3fr 1.6fr 0.1fr;
+    grid-template-columns: 1.3fr 1.6fr 0.1fr;
+    gap: 20px;
+}
+
+.topMainConteudo {
+    max-width: 300px;
+}
+
+.topMainCartaoImg {
+    width: 100%;
+    border: solid 4px var(--bordaRosa);
+}
+
+.mainCartaoConteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.mainCartaoConteudo p {
+    text-align: center;
+    width: 100%;
+}
+
+.classif {
+    width: 70px;
+    margin-left: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.classificacaoLivre,
+.classificacao14,
+.classificacao16,
+.classificacao18 {
+    padding: 10px;
+}
+
+.classificacaoLivre {
+    background: var(--verdinho);
+}
+
+.classificacao14 {
+    background: var(--roxinho);
+}
+
+.classificacao16 {
+    background: var(--amarelinho);
+}
+
+.classificacao18 {
+    background: var(--vermelhinho);
+}
+
+.FilmesSemelhantes {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.mainCartaoImagensSemelhantes {
+    width: 100px;
+    height: 100px;
+}
+
+.mainCartaoImagensSemelhantes img {
+    height: 100%;
+    border: solid 4px var(--bordaRosa);
+}
+
+
+/*
+.main__cartao__top{
+    display:grid;
+    -ms-grid-template-columns: 1.3fr 1.6fr 0.1fr;
+    grid-template-columns: 1.3fr 1.6fr 0.1fr;
+    gap: 20px;
+}
+
+.imgFilme{
+    max-width: 300px;
+}
+
+.main__cartao__top__mainImage{
+    width:100%;
+}
+
+.main__cartao__top__middleContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 10px;
+}
+
+.main__cartao__top__middleContent p{
+    text-align: center;
+    width:100%;
+}
+
+.classificacaoLivre, .classificacao14, .classificacao16, .classificacao18{
+    padding:10px;
+}
+
+.classificacaoLivre{
+    background: var(--verdinho);
+}
+
+.classificacao14{
+    background: var(--roxinho);
+}
+
+.classificacao16{
+    background: var(--amarelinho);
+}
+
+.classificacao18{
+    background: var(--vermelhinho);
+}
+
+.main__cartao__similars{
+    display:flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap:wrap;
+}
+
+.main__cartao__similars__img{
+    width:100px;
+    height:100px;
+    display: none;
+    border: solid 2px var(--bordaAzul);
+}
+
+.main__cartao__similars__img img{
+    width:100%;
+    height:100%;
+}
+
+.displayBlock{
+    display: block;
+}
+*/

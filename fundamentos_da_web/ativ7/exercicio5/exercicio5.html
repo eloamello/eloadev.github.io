@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js\exercicio5.js"></script>
+    <title>Exercicio 5</title>
+  </head>
+  <body>
+    <h1>Exercicio número 5 do Laboratório de JavaScript 2</h1>
+    <p>
+      Faça um programa que implemente a funcionalidade substituir em textos, ou
+      seja, terá um campo "procurar" e um campo "substituir". Ao executar, seu
+      programa deverá procurar as ocorrências no texto do valor digitado em
+      "procurar" e trocar pelo valor digitado em "substituir".
+    </p>
+    <div>
+      <label for="frase">Insira a frase aqui: </label>
+      <input type="text" id="frase" name="txt" value="" />
+    </div>
+    <div>
+      <label for="palavra">Insira a palavra a ser procurada aqui: </label>
+      <input type="text" id="palavra" name="txt" value="" />
+    </div>
+    <div>
+      <label for="substituta">Insira a palavra a ser substituída aqui: </label>
+      <input type="text" id="substituta" name="txt" value="" />
+    </div>
+    <input type="button" id="btn" value="Substituir" onclick="procurar()" />
+  </body>
+</html>
