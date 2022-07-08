@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+@import "button.css";
+@import "imgAnimation.css";
+@import "titleAnimation.css";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: #1b1d32;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Rajdhani", sans-serif;
+}
+
+h1 {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+p {
+    color: #fff;
+    text-align: center;
+}
+
+/*                                      */
+/*   DOG BOX (BOX DAS FOTOS DOS DOGS)   */
+/*                                      */
+
+.dogBox {
+    display: flex;
+    justify-content: center;
+    /*sombra*/
+    border-radius: 52px;
+    background: #1b1d32;
+    box-shadow: 20px 20px 40px #151627, -20px -20px 40px #21243e;
+}
+
+.dogBox img {
+    border-radius: 52px;
+}
+
+/*                                      */
+/*                 FOOTER               */
+/*                                      */
+
+footer {
+    text-transform: uppercase;
+}
+
+footer p{
+    margin:0;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #fff;
+}
+
+a:hover,
+a:focus {
+    color: #ffd200;
+}
+
+@media screen and (min-device-width:320px) and (max-device-width:480px) {
+    h1 {
+        letter-spacing: 3px;
+        font-size: 38px;
+        margin: 5px;
+    }
+
+    p {
+        letter-spacing: 3px;
+        font-size: 12px;
+        margin: 20px;
+    }
+
+    /*                                      */
+    /*   DOG BOX (BOX DAS FOTOS DOS DOGS)   */
+    /*                                      */
+
+    .dogBox {
+        max-height: 90%;
+        max-width: 90%;
+    }
+
+    .dogBox img {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    /*                                      */
+    /*                 FOOTER               */
+    /*                                      */
+
+    footer {
+        margin-top: 20px;
+    }
+
+    footer p {
+        font-size: 9px;
+    }
+
+    .links {
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    a {
+        letter-spacing: 2px;
+        font-size: 9px;
+    }
+}
+
+@media screen and (min-device-width:481px) and (max-device-width:768px) {
+    h1 {
+        letter-spacing: 3px;
+        font-size: 55px;
+        margin: 5px;
+    }
+
+    p {
+        letter-spacing: 3px;
+        font-size: 18px;
+        margin: 30px;
+    }
+
+    /*                                      */
+    /*   DOG BOX (BOX DAS FOTOS DOS DOGS)   */
+    /*                                      */
+
+    .dogBox {
+        max-height: 80%;
+        max-width: 80%;
+    }
+
+    .dogBox img {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    /*                                      */
+    /*                 FOOTER               */
+    /*                                      */
+
+    footer {
+        margin-top: 30px;
+    }
+
+    footer p {
+        font-size: 11px;
+    }
+
+    .links {
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    a {
+        letter-spacing: 2px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-device-width:769px) and (max-device-width:1024px) {
+    h1 {
+        letter-spacing: 3px;
+        font-size: 80px;
+        margin: 5px;
+    }
+
+    p {
+        letter-spacing: 3px;
+        font-size: 20px;
+        margin: 30px;
+    }
+
+    /*                                      */
+    /*   DOG BOX (BOX DAS FOTOS DOS DOGS)   */
+    /*                                      */
+
+    .dogBox {
+        max-height: 50%;
+        max-width: 50%;
+    }
+
+    .dogBox img {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    /*                                      */
+    /*                 FOOTER               */
+    /*                                      */
+
+    footer {
+        margin-top: 30px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    .links {
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    a {
+        letter-spacing: 2px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-device-width:1025px) {
+    h1 {
+        letter-spacing: 3px;
+        font-size: 100px;
+        margin: 5px;
+    }
+
+    p {
+        letter-spacing: 3px;
+        font-size: 30px;
+        margin: 30px;
+    }
+
+    /*                                      */
+    /*   DOG BOX (BOX DAS FOTOS DOS DOGS)   */
+    /*                                      */
+
+    .dogBox {
+        max-height: 40%;
+        max-width: 40%;
+    }
+
+    .dogBox img {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    /*                                      */
+    /*                 FOOTER               */
+    /*                                      */
+
+    footer {
+        margin-top: 40px;
+    }
+    footer p {
+        font-size: 15px;
+    }
+
+    .links {
+        margin-top: 2px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    a {
+        letter-spacing: 2px;
+        font-size: 15px;
+    }
+}
