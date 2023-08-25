@@ -14,6 +14,12 @@ body {
     color: var(--font-color);
 }
 
+#main_content {
+    margin: 2em 8em;
+    padding: 6em;
+    background-color: #ffffff;
+}
+
 h1 {
     text-align: center;
     font-weight: 600;
