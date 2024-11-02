@@ -1,0 +1,140 @@
+---
+import "./select.css";
+import "./timer.css";
+---
+
+<div class="selectTimer" id="selectTimerContainer">
+	<div class="demo-preview" id="progBarContainer">
+		<div class="txt">
+			<span class="time" id="current">00:00</span>
+			<span class="divider">&nbsp;/&nbsp;</span>
+			<span class="time" id="end">00:00</span>
+		</div>
+		<div class="progress progress-striped active">
+			<div
+				style="width: 0%;"
+				class="progress-bar"
+				id="progressBar"
+				data-end="0"
+			>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<select
+			name="selectTimer"
+			class="select"
+			id="selectTimer"
+			autocomplete="off"
+		>
+			<option selected disabled hidden id="timerFeed">Start a timer</option>
+			<option value="5">5 Minutes</option>
+			<option value="15">15 Minutes</option>
+			<option value="30">30 Minutes</option>
+		</select>
+		<audio src="/timer.wav" id="soundCue"></audio>
+	</div>
+</div>
+
+<!-- script -->
+<script>
+	function updateTimer(end: number) {
+		let container = document.getElementById("progBarContainer");
+		if (container) {
+			container.style.display = "block";
+		}
+
+		let progressBar = document.getElementById("progressBar");
+		var data = progressBar?.dataset;
+		if (data) {
+			data.end = end.toString();
+		}
+
+		let endDate = new Date();
+		endDate.setMinutes(endDate.getMinutes() + end);
+		let endText = document.getElementById("end");
+		if (endText) {
+			endText.innerHTML = `${end < 10 ? "0" + end : end}:00`;
+		}
+
+		function getDistance(start: Date, end: Date) {
+			return end.getTime() - start.getTime();
+		}
+
+		// timer
+		var x = setInterval(function () {
+			var distance = getDistance(new Date(), endDate);
+
+			// Time calculations for minutes and seconds
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			var progress = Math.round((Math.trunc(end - minutes - 1) / end) * 100);
+
+			// displaying text
+			let textProgress = document.getElementById("current");
+
+			let minutesInvert = Math.round(end - minutes - 1);
+			let secondsInvert = Math.round(60 - seconds);
+
+			if (textProgress) {
+				var text = "";
+
+				if (secondsInvert == 60) {
+					minutesInvert += 1;
+					secondsInvert = 0;
+				}
+
+				if (minutesInvert < 10) {
+					text += "0";
+					text += minutesInvert;
+				} else {
+					text += minutesInvert;
+				}
+
+				text += ":";
+				if (secondsInvert < 10) {
+					text += "0";
+					text += secondsInvert;
+				} else {
+					text += secondsInvert;
+				}
+
+				textProgress.innerHTML = text;
+			}
+			// for progress bar
+			let visualProgress = document.getElementById("progressBar");
+			if (visualProgress) {
+				visualProgress.style.width = `${progress}%`;
+			}
+
+			// If the count down is finished, write some text
+			if (distance < 0 || progressBar?.dataset.end == "0") {
+				clearInterval(x);
+				(document.getElementById("soundCue") as HTMLAudioElement)?.play();
+				alert("Timer finished");
+			} else if (progressBar?.dataset.end != end.toString()) {
+				clearInterval(x);
+			}
+		}, 1000);
+	}
+
+	const selector = document.querySelector("#selectTimer") as HTMLSelectElement;
+
+	selector?.addEventListener("input", () => {
+		var selectorValue = selector.value;
+		switch (selectorValue) {
+			case "5":
+				updateTimer(5);
+				break;
+			case "15":
+				updateTimer(15);
+				break;
+			case "30":
+				updateTimer(30);
+				break;
+			default:
+				null;
+		}
+	});
+</script>
+<style></style>

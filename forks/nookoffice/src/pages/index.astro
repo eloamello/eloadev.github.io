@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Controls from "../components/Controls.astro";
+import ToDoList from "../components/ToDoList.astro";
+import Lamp from "../components/Lamp.astro";
+
+import "./index.css";
+---
+
+<Layout title="NookOffice">
+	<Lamp />
+	<main>
+		<div class="video-feed">
+			<div class="img-wrapper">
+				<img class="feed-img" id="feed" src="./video-feed/bg_4.gif" />
+				<div class="dates">
+					<p id="locale-date"></p>
+					<p id="locale-time"></p>
+				</div>
+			</div>
+			<Controls />
+			<ToDoList />
+		</div>
+	</main>
+</Layout>

@@ -1,0 +1,101 @@
+---
+import Button from "./Button.astro";
+---
+
+<div class="creds">
+	<div class="contents">
+		<div class="btn-group">
+			<Button
+				url="https://ko-fi.com/clasernaj"
+				value="Donate"
+				icon="gg-heart"
+				target="_blank"
+			/>
+			<Button
+				url="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.nookoffice.live&text=Staying%20on%20top%20of%20my%20work%20w/%20Animal%20Crossing%20music%20%3A%29"
+				value="Share"
+				icon="gg-share"
+				target="_blank"
+			/>
+			<Button url="/?embed=true" value="Embed" icon="gg-git-branch" target="" />
+		</div>
+		<div class="txt">
+			<p>
+				developed by <a
+					href="https://github.com/cjlaserna/nookoffice"
+					target="_blank"
+				>
+					@clasernaj</a
+				>
+			</p>
+		</div>
+	</div>
+</div>
+
+<style>
+	.creds p,
+	.creds a {
+		font-size: 0.75rem;
+		color: #000;
+		text-align: right;
+	}
+
+	.creds p > * {
+		display: inline;
+	}
+	.creds {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		margin-left: 10px;
+		align-items: flex-end;
+		height: 100%;
+	}
+	.contents {
+		margin-top: 5px;
+		max-width: 500px;
+		position: relative;
+	}
+	.contents .txt {
+		position: absolute;
+		bottom: -10px;
+		text-align: right;
+		right: 0;
+	}
+	.btn-group {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 10px;
+		width: 100%;
+		flex-wrap: wrap;
+
+		flex-direction: row;
+		gap: 10px;
+	}
+
+	@media only screen and (max-width: 500px) {
+		.btn-group {
+			gap: 5px;
+		}
+
+		.contents,
+		.contents > * {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+
+		.contents .txt {
+			text-align: center !important;
+			margin: 0 auto !important;
+			right: unset;
+		}
+
+		.creds {
+			justify-content: center;
+			align-items: center;
+		}
+	}
+</style>
